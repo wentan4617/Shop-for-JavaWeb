@@ -89,7 +89,7 @@ public class LoginController extends BaseController {
 	public String loginFail(HttpServletRequest request, HttpServletResponse response, Model model) {
 		String from = request.getParameter("from");
 		SystemAuthorizingRealm.Principal principal = UserUtils.getPrincipal();
-		
+
 		// 如果已经登录，则跳转到管理首页
 		if(principal != null){
 			if (from != null && from.equals("app"))

@@ -44,7 +44,10 @@
 		
 		<!-- jdbc driver setting -->
 		<mysql.driver.version>5.1.30</mysql.driver.version>
+		<!-- edit by went 11.2.0.3
 		<oracle.driver.version>10.2.0.4.0</oracle.driver.version>
+		-->
+		<oracle.driver.version>11.2.0.3.0</oracle.driver.version>
 		<mssql.driver.version>1.3.1</mssql.driver.version>
 	    
 		<!-- environment setting -->
@@ -67,12 +70,19 @@
 			<url>http://192.168.11.36:8888/nexus/content/groups/public</url>
 		</repository> -->
 
+		<!-- osChina的依赖-->
+		<!--
 		<repository>
 			<id>oschina-repos</id>
 			<name>Oschina Releases</name>
 			<url>http://maven.oschina.net/content/groups/public</url>
 		</repository>
-
+		-->
+		<!-- added by went -->
+		<repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository>
 		<repository>
 			<id>java-repos</id>
 			<name>Java Repository</name>
@@ -108,13 +118,13 @@
 			<name>Activiti Repository 2</name>
 			<url>https://app.camunda.com/nexus/content/groups/public</url>
 		</repository>
-
+		<!--
 		<repository>
 			<id>thinkgem-repos</id>
 			<name>ThinkGem Repository</name>
 			<url>http://git.oschina.net/thinkgem/repos/raw/master</url>
 		</repository>
-
+		-->
 		<repository>
 			<id>thinkgem-repos2</id>
 			<name>ThinkGem Repository 2</name>
@@ -132,13 +142,13 @@
 			<name>Team Nexus Repository</name>
 			<url>http://192.168.11.36:8888/nexus/content/groups/public</url>
 		</pluginRepository> -->
-		
+		<!--
 		<pluginRepository>
             <id>oschina-repos</id>
             <name>Oschina Releases</name>
             <url>http://maven.oschina.net/content/groups/public</url>
         </pluginRepository>
-		
+		-->
 	</pluginRepositories> 
 	
 	<!-- 依赖项定义 -->
@@ -254,12 +264,14 @@
 			<version>${mysql.driver.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- deleted by went temporyly
 		<dependency>
 			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc14</artifactId>
+			<artifactId>ojdbc6</artifactId>
 			<version>${oracle.driver.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>net.sourceforge.jtds</groupId>
 			<artifactId>jtds</artifactId>
